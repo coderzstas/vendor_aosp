@@ -165,11 +165,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     org.pixelexperience.keydisabler
 
+# OTA
+CUSTOM_OTA_VERSION_CODE := pie_caf
+
+CUSTOM_PROPERTIES += \
+    org.pixelexperience.ota.version_code=$(CUSTOM_OTA_VERSION_CODE)
+
+PRODUCT_PACKAGES += \
+    Updates
+
+PRODUCT_COPY_FILES += \
+    vendor/aosp/config/permissions/org.pixelexperience.ota.xml:system/etc/permissions/org.pixelexperience.ota.xml
+
 # Branding
 include vendor/aosp/config/branding.mk
-
-# OTA
-include vendor/aosp/config/ota.mk
 
 # GApps
 include vendor/gapps/config.mk
