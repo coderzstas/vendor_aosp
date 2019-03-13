@@ -169,7 +169,8 @@ PRODUCT_BOOT_JARS += \
 CUSTOM_OTA_VERSION_CODE := pie_caf
 
 CUSTOM_PROPERTIES += \
-    org.pixelexperience.ota.version_code=$(CUSTOM_OTA_VERSION_CODE)
+    org.pixelexperience.ota.version_code=$(CUSTOM_OTA_VERSION_CODE) \
+    sys.ota.disable_uncrypt=1
 
 PRODUCT_PACKAGES += \
     Updates
